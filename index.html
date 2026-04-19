@@ -38,22 +38,21 @@ nav a {
     color: #555;
 }
 
-/* HERO */
+/* HERO (FIXED + CLEAN) */
 .hero {
-    background: url('IMG_0206.jpegy') center/cover no-repeat;
+    position: relative;
+    background: url('IMG_0206.jpeg') center/cover no-repeat;
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
 }
 
-.hero h2 {
-    font-size: 36px;
-    background: rgba(0,0,0,0.4);
-    padding: 15px 25px;
-    border-radius: 10px;
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
 }
 
 /* SECTION */
@@ -160,8 +159,7 @@ button {
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-    </div>
+<div class="hero"></div>
 
 <!-- ABOUT -->
 <section id="about" class="section">
