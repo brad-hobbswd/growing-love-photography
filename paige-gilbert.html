@@ -6,6 +6,8 @@
 
 <title>Paige & Junior Maternity Shoot</title>
 
+<meta name="author" content="Brad Hobbs Web Design">
+
 <style>
 body {
     margin: 0;
@@ -22,6 +24,18 @@ header {
 
 header h1 {
     color: #d88c9a;
+}
+
+/* BACK LINK */
+.back-home {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #d88c9a;
+    font-size: 14px;
 }
 
 /* BUTTONS */
@@ -100,10 +114,22 @@ header h1 {
     color: white;
     cursor: pointer;
 }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #fafafa;
+    margin-top: 40px;
+}
 </style>
 </head>
 
 <body>
+
+<div class="back-home">
+    <a href="index.html">← Back to Home</a>
+</div>
 
 <header>
     <h1>Paige & Junior Maternity Shoot</h1>
@@ -116,7 +142,7 @@ header h1 {
 </div>
 
 <!-- GRID -->
-<section id="gallery" class="gallery">
+<section class="gallery">
 
 <img src="IMG_0208.jpeg" onclick="startSlideshow(0)">
 <img src="IMG_0209.jpeg" onclick="startSlideshow(1)">
@@ -146,6 +172,18 @@ header h1 {
     <img id="slide-img">
     <span class="nav-btn next" onclick="changeSlide(1)">❯</span>
 </div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© Growing Love Photography</p>
+
+    <p style="margin-top:5px; font-size:13px; color:#aaa;">
+        Website designed by 
+        <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" style="color:#d88c9a; text-decoration:none;">
+            Brad Hobbs Web Design
+        </a>
+    </p>
+</footer>
 
 <script>
 let images = [
