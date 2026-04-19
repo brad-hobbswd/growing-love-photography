@@ -40,7 +40,7 @@ nav a {
 
 /* HERO */
 .hero {
-    background: url('IMG_0206.jpeg') center/cover no-repeat;
+    background: url('banner.jpg') center/cover no-repeat;
     height: 400px;
     display: flex;
     align-items: center;
@@ -80,17 +80,17 @@ nav a {
     flex: 1;
 }
 
-/* ALBUMS */
+/* ALBUM */
 .albums {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .album {
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
+    max-width: 300px;
 }
 
 .album:hover {
@@ -155,19 +155,19 @@ button {
     <h1>Growing Love Photography</h1>
     <div>
         <a href="#about">About</a>
-        <a href="#albums">Client Albums</a>
+        <a href="#albums">Client Album</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h2></h2>
+    <h2>Real moments. Real connection. Real love.</h2>
 </div>
 
 <!-- ABOUT -->
 <section id="about" class="section">
     <div class="about">
-        <img src="IMG_0205.jpeg" alt="Photographer Samantha">
+        <img src="photographer.jpg" alt="Photographer Samantha">
 
         <div class="about-text">
             <h2>Hi, I’m Samantha 🤍</h2>
@@ -189,19 +189,14 @@ button {
     </div>
 </section>
 
-<!-- ALBUMS -->
+<!-- SINGLE ALBUM -->
 <section id="albums" class="section">
-    <h2>Client Albums</h2>
+    <h2>Client Album</h2>
 
     <div class="albums">
-        <div class="album" onclick="openAlbum('family1', '1234')">
-            <img src="album1.jpg" alt="Smith Family">
-            <p>Smith Family</p>
-        </div>
-
-        <div class="album" onclick="openAlbum('family2', '5678')">
-            <img src="album2.jpg" alt="Johnson Family">
-            <p>Johnson Family</p>
+        <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
+            <img src="paige-thumbnail.jpg" alt="Paige Gilbert Paternal Shoot">
+            <p>Paige Gilbert’s Paternal Shoot</p>
         </div>
     </div>
 </section>
@@ -210,7 +205,7 @@ button {
 <div id="passwordModal">
     <div class="modal-content">
         <h3>Enter Password</h3>
-        <input type="password" id="passwordInput" placeholder="Welcome1">
+        <input type="password" id="passwordInput" placeholder="Enter password">
         <br>
         <button onclick="checkPassword()">Enter</button>
     </div>
