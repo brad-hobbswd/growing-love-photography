@@ -10,21 +10,37 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #fff;
+    background: #fff;
     color: #333;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 15px;
 }
 
 header h1 {
     color: #d88c9a;
 }
 
-/* GALLERY GRID */
+/* BUTTONS */
+.view-toggle {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.view-toggle button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: #d88c9a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* GRID */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -36,34 +52,53 @@ header h1 {
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s;
 }
 
 .gallery img:hover {
     transform: scale(1.03);
 }
 
-/* LIGHTBOX */
-#lightbox {
+/* SLIDESHOW */
+#slideshow {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: black;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-#lightbox img {
+#slideshow img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80%;
     border-radius: 10px;
 }
 
-#lightbox:active {
-    display: none;
+/* NAV */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -75,31 +110,77 @@ header h1 {
     <p>Growing Love Photography</p>
 </header>
 
-<section class="gallery">
+<div class="view-toggle">
+    <button onclick="showGrid()">Grid View</button>
+    <button onclick="startSlideshow(0)">Slideshow</button>
+</div>
 
-    <!-- REPLACE THESE WITH YOUR REAL IMAGES -->
-    <img src="photo1.jpg" onclick="openLightbox(this.src)">
-    <img src="photo2.jpg" onclick="openLightbox(this.src)">
-    <img src="photo3.jpg" onclick="openLightbox(this.src)">
-    <img src="photo4.jpg" onclick="openLightbox(this.src)">
-    <img src="photo5.jpg" onclick="openLightbox(this.src)">
-    <img src="photo6.jpg" onclick="openLightbox(this.src)">
+<!-- GRID -->
+<section id="gallery" class="gallery">
+
+<img src="IMG_0208.jpeg" onclick="startSlideshow(0)">
+<img src="IMG_0209.jpeg" onclick="startSlideshow(1)">
+<img src="IMG_0210.jpeg" onclick="startSlideshow(2)">
+<img src="IMG_0211.jpeg" onclick="startSlideshow(3)">
+<img src="IMG_0212.jpeg" onclick="startSlideshow(4)">
+<img src="IMG_0213.jpeg" onclick="startSlideshow(5)">
+<img src="IMG_0214.jpeg" onclick="startSlideshow(6)">
+<img src="IMG_0215.jpeg" onclick="startSlideshow(7)">
+<img src="IMG_0216.jpeg" onclick="startSlideshow(8)">
+<img src="IMG_0217.jpeg" onclick="startSlideshow(9)">
+<img src="IMG_0218.jpeg" onclick="startSlideshow(10)">
+<img src="IMG_0219.jpeg" onclick="startSlideshow(11)">
+<img src="IMG_0220.jpeg" onclick="startSlideshow(12)">
+<img src="IMG_0221.jpeg" onclick="startSlideshow(13)">
+<img src="IMG_0222.jpeg" onclick="startSlideshow(14)">
+<img src="IMG_0223.jpeg" onclick="startSlideshow(15)">
+<img src="IMG_0224.jpeg" onclick="startSlideshow(16)">
+<img src="IMG_0225.jpeg" onclick="startSlideshow(17)">
 
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
+<!-- SLIDESHOW -->
+<div id="slideshow">
+    <span class="close" onclick="closeSlideshow()">✕</span>
+    <span class="nav-btn prev" onclick="changeSlide(-1)">❮</span>
+    <img id="slide-img">
+    <span class="nav-btn next" onclick="changeSlide(1)">❯</span>
 </div>
 
 <script>
-function openLightbox(src) {
-    document.getElementById('lightbox').style.display = 'flex';
-    document.getElementById('lightbox-img').src = src;
+let images = [
+"IMG_0208.jpeg","IMG_0209.jpeg","IMG_0210.jpeg","IMG_0211.jpeg","IMG_0212.jpeg","IMG_0213.jpeg",
+"IMG_0214.jpeg","IMG_0215.jpeg","IMG_0216.jpeg","IMG_0217.jpeg","IMG_0218.jpeg","IMG_0219.jpeg",
+"IMG_0220.jpeg","IMG_0221.jpeg","IMG_0222.jpeg","IMG_0223.jpeg","IMG_0224.jpeg","IMG_0225.jpeg"
+];
+
+let currentIndex = 0;
+
+function startSlideshow(index) {
+    currentIndex = index;
+    document.getElementById("slideshow").style.display = "flex";
+    showSlide();
 }
 
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
+function showSlide() {
+    document.getElementById("slide-img").src = images[currentIndex];
+}
+
+function changeSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+
+    showSlide();
+}
+
+function closeSlideshow() {
+    document.getElementById("slideshow").style.display = "none";
+}
+
+function showGrid() {
+    closeSlideshow();
 }
 </script>
 
