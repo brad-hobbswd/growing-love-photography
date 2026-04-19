@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Growing Love Photography</title>
+
+<meta name="description" content="Growing Love Photography - Real moments. Real connection. Real love.">
+<meta name="author" content="Brad Hobbs Web Design">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    background: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+nav h1 {
+    font-size: 20px;
+    color: #d88c9a;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+/* HERO */
+.hero {
+    background: url('banner.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    background: rgba(0,0,0,0.4);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* ALBUMS */
+.albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.album {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.album:hover {
+    transform: scale(1.03);
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #fafafa;
+    margin-top: 40px;
+}
+
+/* PASSWORD MODAL */
+#passwordModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #d88c9a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>Growing Love Photography</h1>
+    <div>
+        <a href="#about">About</a>
+        <a href="#albums">Client Albums</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>Real moments. Real connection. Real love.</h2>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="about">
+        <img src="photographer.jpg" alt="Photographer Samantha">
+
+        <div class="about-text">
+            <h2>Hi, I’m Samantha 🤍</h2>
+
+            <p>The heart behind Growing Love Photography.</p>
+
+            <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
+
+            <p>That is why Growing Love Photography was created 🌈  
+            A space where every family can feel seen, valued, and at ease.</p>
+
+            <p>Every child deserves to be included.  
+            Every family deserves to have their moments captured.</p>
+
+            <p>Here there is no pressure, only real moments, real connection, and real love.</p>
+
+            <p>I’m so honored to be part of your story 🤍</p>
+        </div>
+    </div>
+</section>
+
+<!-- ALBUMS -->
+<section id="albums" class="section">
+    <h2>Client Albums</h2>
+
+    <div class="albums">
+        <div class="album" onclick="openAlbum('family1', '1234')">
+            <img src="album1.jpg" alt="Smith Family">
+            <p>Smith Family</p>
+        </div>
+
+        <div class="album" onclick="openAlbum('family2', '5678')">
+            <img src="album2.jpg" alt="Johnson Family">
+            <p>Johnson Family</p>
+        </div>
+    </div>
+</section>
+
+<!-- PASSWORD MODAL -->
+<div id="passwordModal">
+    <div class="modal-content">
+        <h3>Enter Password</h3>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <br>
+        <button onclick="checkPassword()">Enter</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© Growing Love Photography</p>
+
+    <p style="margin-top:5px; font-size:13px; color:#aaa;">
+        Website designed by 
+        <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" style="color:#d88c9a; text-decoration:none;">
+            Brad Hobbs Web Design
+        </a>
+    </p>
+</footer>
+
+<script>
+let currentAlbum = '';
+let correctPassword = '';
+
+function openAlbum(album, password) {
+    currentAlbum = album;
+    correctPassword = password;
+    document.getElementById('passwordModal').style.display = 'flex';
+}
+
+function checkPassword() {
+    let input = document.getElementById('passwordInput').value;
+
+    if (input === correctPassword) {
+        window.location.href = currentAlbum + ".html";
+    } else {
+        alert("Incorrect password");
+    }
+}
+</script>
+
+</body>
+</html>
