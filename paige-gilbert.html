@@ -193,7 +193,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-    <p>© Growing Love Photography</p>
+    <p>© <span id="year"></span> Growing Love Photography</p>
 
     <p style="margin-top:5px; font-size:13px; color:#aaa;">
         Website designed by 
@@ -203,10 +203,10 @@ footer {
     </p>
 
     <p style="margin-top:10px; font-size:14px;">
-    <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank" style="color:#d88c9a; text-decoration:none;">
-        Follow along on Facebook 🤍
-    </a>
-</p>
+        <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank" style="color:#d88c9a; text-decoration:none;">
+            Follow along on Facebook 🤍
+        </a>
+    </p>
 </footer>
 
 <script>
@@ -244,6 +244,10 @@ function closeSlideshow() {
 function showGrid() {
     closeSlideshow();
 }
+</script>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
