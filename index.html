@@ -44,18 +44,17 @@ nav a {
     color: #555;
 }
 
-/* HERO WRAPPER */
+/* HERO */
 .hero-wrapper {
     max-width: 1000px;
-    margin: 30px auto 20px;
+    margin: 20px auto 10px;
     padding: 0 20px;
 }
 
 .hero {
     background: rgba(255, 182, 193, 0.08);
     border-radius: 20px;
-    padding: 10px 15px;
-
+    padding: 8px 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
@@ -66,9 +65,23 @@ nav a {
     border-radius: 15px;
 }
 
+/* DIVIDER (NEW) */
+.divider {
+    width: 60%;
+    height: 1px;
+    margin: 15px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(216, 140, 154, 0.4),
+        transparent
+    );
+}
+
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 35px 20px;
     max-width: 1000px;
     margin: auto;
 }
@@ -79,29 +92,48 @@ nav a {
     backdrop-filter: blur(12px);
 
     border-radius: 20px;
-    padding: 35px;
+    padding: 30px;
 
     box-shadow: 0 15px 40px rgba(216, 140, 154, 0.3);
     border: 1px solid rgba(255, 182, 193, 0.4);
 
-    margin-top: 30px;
+    margin-top: 10px; /* reduced */
 }
 
 /* ABOUT */
 .about {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
 }
 
 .about img {
-    width: 300px;
+    width: 280px;
     border-radius: 15px;
 }
 
 .about-text {
     flex: 1;
+}
+
+/* ALBUM CARD */
+.album-card {
+    background: rgba(255, 223, 120, 0.12);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    padding: 30px;
+
+    box-shadow: 0 10px 30px rgba(255, 200, 100, 0.2);
+    border: 1px solid rgba(255, 223, 120, 0.35);
+
+    margin-top: 10px; /* reduced */
+}
+
+.album-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* ALBUM */
@@ -114,7 +146,7 @@ nav a {
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-    max-width: 300px;
+    max-width: 280px;
 }
 
 .album:hover {
@@ -129,9 +161,9 @@ nav a {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     background: #fafafa;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 /* PASSWORD MODAL */
@@ -169,25 +201,6 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
-
-    .album-card {
-    background: rgba(255, 223, 120, 0.12);/* soft yellow */
-    backdrop-filter: blur(10px);
-
-    border-radius: 20px;
-    padding: 30px;
-
-    box-shadow: 0 10px 30px rgba(255, 200, 100, 0.2);
-    border: 1px solid rgba(255, 223, 120, 0.35);
-
-    margin-top: 20px;
-}
-
-    .album-card h2 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-    
 </style>
 </head>
 
@@ -211,6 +224,9 @@ button {
     </div>
 </div>
 
+<!-- DIVIDER -->
+<div class="divider"></div>
+
 <!-- ABOUT -->
 <section id="about" class="section">
     <div class="about-card">
@@ -219,24 +235,19 @@ button {
 
             <div class="about-text">
                 <h2>Hi, I’m Samantha 🤍</h2>
-
                 <p>The heart behind Growing Love Photography.</p>
-
                 <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
-
-                <p>That is why Growing Love Photography was created 🌈  
-                A space where every family can feel seen, valued, and at ease.</p>
-
-                <p>Every child deserves to be included.  
-                Every family deserves to have their moments captured.</p>
-
+                <p>That is why Growing Love Photography was created 🌈 A space where every family can feel seen, valued, and at ease.</p>
+                <p>Every child deserves to be included. Every family deserves to have their moments captured.</p>
                 <p>Here there is no pressure, only real moments, real connection, and real love.</p>
-
                 <p>I’m so honored to be part of your story 🤍</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
 
 <!-- ALBUM -->
 <section id="albums" class="section">
@@ -253,16 +264,6 @@ button {
 
     </div>
 </section>
-
-<!-- PASSWORD MODAL -->
-<div id="passwordModal">
-    <div class="modal-content">
-        <h3>Enter Password</h3>
-        <input type="password" id="passwordInput" placeholder="Enter password">
-        <br>
-        <button onclick="checkPassword()">Enter</button>
-    </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
