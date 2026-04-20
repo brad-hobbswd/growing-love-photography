@@ -17,7 +17,7 @@ body {
     color: #333;
 }
 
-/* NAVBAR (UPDATED BUT NOT CHANGED STRUCTURE) */
+/* NAVBAR */
 nav {
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -32,7 +32,6 @@ nav {
     align-items: center;
 }
 
-/* LOGO ADDITION */
 .logo-container {
     display: flex;
     align-items: center;
@@ -50,18 +49,17 @@ nav {
     color: #d88c9a;
 }
 
-/* LINKS (UNCHANGED STYLE) */
 nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #555;
 }
 
-/* HERO (UNCHANGED FROM YOUR VERSION) */
-.hero {
-    background: url('IMG_0206.jpeg') center/contain no-repeat;
-    background-color: #fff;
-    height: 400px;
+/* HERO (FULL IMAGE, NO CROP) */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* SECTION */
@@ -71,16 +69,16 @@ nav a {
     margin: auto;
 }
 
-/* ADDED SOFT COLORS ONLY */
+/* FADED COLORS */
 .about-section {
-    background: #fff0f5;
+    background: linear-gradient(180deg, #fff0f5 0%, #ffffff 70%);
 }
 
 .album-section {
-    background: #f3e8ff;
+    background: linear-gradient(180deg, #f3e8ff 0%, #ffffff 70%);
 }
 
-/* ABOUT (UNCHANGED) */
+/* ABOUT */
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +95,7 @@ nav a {
     flex: 1;
 }
 
-/* ALBUM (UNCHANGED) */
+/* ALBUM CARD */
 .albums {
     display: flex;
     justify-content: center;
@@ -106,12 +104,16 @@ nav a {
 .album {
     cursor: pointer;
     text-align: center;
-    transition: transform 0.2s ease;
     max-width: 300px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .album:hover {
     transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .album img {
@@ -119,7 +121,7 @@ nav a {
     border-radius: 10px;
 }
 
-/* FOOTER (UNCHANGED + ADDED YEAR SUPPORT) */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
@@ -127,7 +129,7 @@ footer {
     margin-top: 40px;
 }
 
-/* PASSWORD MODAL (UNCHANGED) */
+/* PASSWORD MODAL */
 #passwordModal {
     display: none;
     position: fixed;
@@ -135,7 +137,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
 }
@@ -171,7 +173,7 @@ button {
 <nav>
     <div class="nav-inner">
         <div class="logo-container">
-            <img src="logo.png" alt="Growing Love Photography Logo">
+            <img src="logo.png" alt="Logo">
             <span>Growing Love Photography</span>
         </div>
 
@@ -182,8 +184,10 @@ button {
     </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero"></div>
+<!-- HERO (FULL IMAGE DISPLAY) -->
+<div class="hero">
+    <img src="IMG_0206.jpeg" alt="Banner">
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="section about-section">
@@ -270,7 +274,6 @@ function checkPassword() {
     }
 }
 
-/* YEAR AUTO */
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
