@@ -41,8 +41,16 @@ nav a {
 /* HERO (FIXED + CLEAN) */
 .hero {
     position: relative;
-    background: url('1C3BC68E-2423-4CBA-995F-061E72E30BC7.png') center/cover no-repeat;
-    height: 400px;
+    background: url('1C3BC68E-2423-4CBA-995F-061E72E30BC7.png') center center / cover no-repeat;
+    height: 65vh;
+    min-height: 350px;
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
 }
 
 .hero::after {
@@ -57,7 +65,7 @@ nav a {
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
 }
@@ -144,6 +152,17 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
+
+    .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.08);
+}
+    
 </style>
 </head>
 
