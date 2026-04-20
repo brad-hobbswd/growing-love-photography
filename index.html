@@ -318,7 +318,7 @@ button {
     
 <!-- FOOTER -->
 <footer>
-    <p>© Growing Love Photography</p>
+    <p>© <span id="year"></span> Growing Love Photography</p>
 
     <p style="margin-top:5px; font-size:13px; color:#aaa;">
         Website designed by 
@@ -368,7 +368,12 @@ function checkPassword() {
         checkPassword();
     }
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
 </script>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
