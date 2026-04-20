@@ -201,6 +201,28 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
+
+.album.empty {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.placeholder {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(200, 170, 255, 0.15);
+    border: 2px dashed rgba(200, 170, 255, 0.4);
+
+    color: #8a6fbf;
+    font-size: 14px;
+}
+    
 </style>
 </head>
 
@@ -260,22 +282,27 @@ button {
     <div class="album-card">
 
         <h2>Client Albums</h2>
+           <div class="albums">
 
-        <div class="albums">
-            <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
-                <img src="IMG_0207.jpeg" alt="Paige Gilbert Paternal Shoot">
-                <p>Paige & Junior's Maternity Shoot</p>
-            </div>
-        </div>
-
-         <div class="albums">
-            <div class="album" onclick="openAlbum('', '')">
-                <img src="#" alt="Coming Soon!">
-                <p>More to Come/p>
-            </div>
-        </div>
-
+    <!-- ACTIVE ALBUM -->
+    <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
+        <img src="IMG_0207.jpeg" alt="Paige Gilbert Maternity Shoot">
+        <p>Paige & Junior's Maternity Shoot</p>
     </div>
+
+    <!-- BLANK ALBUM 1 -->
+    <div class="album empty">
+        <div class="placeholder">Coming Soon</div>
+        <p>Future Client Album</p>
+    </div>
+
+    <!-- BLANK ALBUM 2 -->
+    <div class="album empty">
+        <div class="placeholder">Coming Soon</div>
+        <p>Future Client Album</p>
+    </div>
+
+</div>
 </section>
     
 <!-- PASSWORD MODAL -->
