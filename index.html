@@ -36,6 +36,7 @@ nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #555;
+}
     
 .hero {
     text-align: center;
@@ -56,16 +57,6 @@ nav a {
     }
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
-}
-
 /* SECTION */
 .section {
     padding: 80px 20px;
@@ -83,7 +74,7 @@ nav a {
 
 .about img {
     width: 300px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .about-text {
@@ -156,26 +147,16 @@ button {
     cursor: pointer;
 }
 
-    .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.08);
-}
-
  .about-card {
-    background: rgba(255, 182, 193, 0.25);
+    background: rgba(255, 182, 193, 0.18);
     backdrop-filter: blur(12px);
-
+    
     border-radius: 20px;
     padding: 35px;
 
     box-shadow: 0 15px 40px rgba(216, 140, 154, 0.3);
     border: 1px solid rgba(255, 182, 193, 0.4);
-
+    margin: 20px auto;
     max-width: 1000px;
 }
 
