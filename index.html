@@ -37,6 +37,22 @@ nav a {
     text-decoration: none;
     color: #555;
 }
+
+    nav {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     
 .hero {
     text-align: center;
@@ -175,6 +191,26 @@ button {
 .about-text {
     flex: 1;
 }
+
+.hero-wrapper {
+    max-width: 1000px;
+    margin: 30px auto 10px;
+    padding: 0 20px;
+}
+
+.hero {
+    background: rgba(255, 182, 193, 0.08);
+    border-radius: 20px;
+    padding: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
     
 </style>
 </head>
@@ -183,16 +219,20 @@ button {
 
 <!-- NAV -->
 <nav>
-    <h1>Growing Love Photography</h1>
-    <div>
-        <a href="#about">About</a>
-        <a href="#albums">Client Album</a>
+    <div class="nav-container">
+        <h1>Growing Love Photography</h1>
+        <div>
+            <a href="#about">About</a>
+            <a href="#albums">Client Album</a>
+        </div>
     </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-    <img src="1C3BC68E-2423-4CBA-995F-061E72E30BC7.png" alt="Growing Love Photography Banner">
+<div class="hero-wrapper">
+    <div class="hero">
+        <img src="1C3BC68E-2423-4CBA-995F-061E72E30BC7.png" alt="Growing Love Photography Banner">
+    </div>
 </div>
 
 <!-- ABOUT -->
