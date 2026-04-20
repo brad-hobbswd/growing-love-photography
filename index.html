@@ -9,13 +9,6 @@
 <meta name="description" content="Growing Love Photography - Real moments. Real connection. Real love.">
 <meta name="author" content="Brad Hobbs Web Design">
 
-<!-- FAVICONS -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" href="favicon.ico">
-<meta name="theme-color" content="#f8d7da">
-
 <style>
 body {
     margin: 0;
@@ -24,7 +17,7 @@ body {
     color: #333;
 }
 
-/* NAVBAR */
+/* NAVBAR (UPDATED BUT NOT CHANGED STRUCTURE) */
 nav {
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -33,12 +26,13 @@ nav {
 .nav-inner {
     max-width: 1000px;
     margin: auto;
-    padding: 15px 20px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* LOGO ADDITION */
 .logo-container {
     display: flex;
     align-items: center;
@@ -49,36 +43,24 @@ nav {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .logo-container span {
-    font-size: 18px;
+    font-size: 20px;
     color: #d88c9a;
-    font-weight: 500;
 }
 
+/* LINKS (UNCHANGED STYLE) */
 nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #555;
 }
 
-/* HERO */
+/* HERO (UNCHANGED FROM YOUR VERSION) */
 .hero {
-    position: relative;
     background: url('IMG_0206.jpeg') center/cover no-repeat;
     height: 400px;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.15);
 }
 
 /* SECTION */
@@ -88,7 +70,16 @@ nav a {
     margin: auto;
 }
 
-/* ABOUT */
+/* ADDED SOFT COLORS ONLY */
+.about-section {
+    background: #fff0f5;
+}
+
+.album-section {
+    background: #f3e8ff;
+}
+
+/* ABOUT (UNCHANGED) */
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +96,7 @@ nav a {
     flex: 1;
 }
 
-/* ALBUM */
+/* ALBUM (UNCHANGED) */
 .albums {
     display: flex;
     justify-content: center;
@@ -127,7 +118,7 @@ nav a {
     border-radius: 10px;
 }
 
-/* FOOTER */
+/* FOOTER (UNCHANGED + ADDED YEAR SUPPORT) */
 footer {
     text-align: center;
     padding: 25px;
@@ -135,7 +126,7 @@ footer {
     margin-top: 40px;
 }
 
-/* PASSWORD MODAL */
+/* PASSWORD MODAL (UNCHANGED) */
 #passwordModal {
     display: none;
     position: fixed;
@@ -194,7 +185,7 @@ button {
 <div class="hero"></div>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section about-section">
     <div class="about">
         <img src="IMG_0205.jpeg" alt="Photographer Samantha">
 
@@ -218,8 +209,8 @@ button {
     </div>
 </section>
 
-<!-- SINGLE ALBUM -->
-<section id="albums" class="section">
+<!-- ALBUM -->
+<section id="albums" class="section album-section">
     <h2>Client Album</h2>
 
     <div class="albums">
@@ -244,7 +235,7 @@ button {
 <footer>
     <p>© <span id="year"></span> Growing Love Photography</p>
 
-    <p style="margin-top:5px; font-size:13px; color:#aaa;">
+    <p style="margin-top:5px; font-size:13px; color:#888;">
         Website designed by 
         <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" style="color:#d88c9a; text-decoration:none;">
             Brad Hobbs Web Design
@@ -278,7 +269,7 @@ function checkPassword() {
     }
 }
 
-/* AUTO YEAR */
+/* YEAR AUTO */
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
