@@ -165,6 +165,35 @@ button {
     bottom: 0;
     background: rgba(0,0,0,0.08);
 }
+
+ .about-card {
+    background: rgba(255, 182, 193, 0.25);
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+    padding: 35px;
+
+    box-shadow: 0 15px 40px rgba(216, 140, 154, 0.3);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+
+    max-width: 1000px;
+}
+
+    .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.about-text {
+    flex: 1;
+}
     
 </style>
 </head>
@@ -187,25 +216,27 @@ button {
 
 <!-- ABOUT -->
 <section id="about" class="section">
-    <div class="about">
-        <img src="IMG_0205.jpeg" alt="Photographer Samantha">
+    <div class="about-card">
+        <div class="about">
+            <img src="IMG_0205.jpeg" alt="Photographer Samantha">
 
-        <div class="about-text">
-            <h2>Hi, I’m Samantha 🤍</h2>
+            <div class="about-text">
+                <h2>Hi, I’m Samantha 🤍</h2>
 
-            <p>The heart behind Growing Love Photography.</p>
+                <p>The heart behind Growing Love Photography.</p>
 
-            <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
+                <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
 
-            <p>That is why Growing Love Photography was created 🌈  
-            A space where every family can feel seen, valued, and at ease.</p>
+                <p>That is why Growing Love Photography was created 🌈  
+                A space where every family can feel seen, valued, and at ease.</p>
 
-            <p>Every child deserves to be included.  
-            Every family deserves to have their moments captured.</p>
+                <p>Every child deserves to be included.  
+                Every family deserves to have their moments captured.</p>
 
-            <p>Here there is no pressure, only real moments, real connection, and real love.</p>
+                <p>Here there is no pressure, only real moments, real connection, and real love.</p>
 
-            <p>I’m so honored to be part of your story 🤍</p>
+                <p>I’m so honored to be part of your story 🤍</p>
+            </div>
         </div>
     </div>
 </section>
