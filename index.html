@@ -9,6 +9,13 @@
 <meta name="description" content="Growing Love Photography - Real moments. Real connection. Real love.">
 <meta name="author" content="Brad Hobbs Web Design">
 
+<!-- FAVICONS -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
+<meta name="theme-color" content="#f8d7da">
+
 <style>
 body {
     margin: 0;
@@ -23,19 +30,32 @@ nav {
     border-bottom: 1px solid #eee;
 }
 
-.nav-container {
+.nav-inner {
     max-width: 1000px;
     margin: auto;
     padding: 15px 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h1 {
-    font-size: 20px;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-container span {
+    font-size: 18px;
     color: #d88c9a;
+    font-weight: 500;
 }
 
 nav a {
@@ -45,105 +65,57 @@ nav a {
 }
 
 /* HERO */
-.hero-wrapper {
-    max-width: 1000px;
-    margin: 15px auto 5px;
-    padding: 0 20px;
-}
-
 .hero {
-    background: rgba(255, 182, 193, 0.08);
-    border-radius: 20px;
-    padding: 8px 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    position: relative;
+    background: url('IMG_0206.jpeg') center/cover no-repeat;
+    height: 400px;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 15px;
-}
-
-/* DIVIDER */
-.divider {
-    width: 50%;
-    height: 1px;
-    margin: 25px auto 15px;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(216, 140, 154, 0.35),
-        transparent
-    );
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
 }
 
 /* SECTION */
 .section {
-    padding: 30px 20px;
+    padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
-}
-
-/* ABOUT CARD */
-.about-card {
-    background: rgba(255, 182, 193, 0.18);
-    backdrop-filter: blur(12px);
-
-    border-radius: 20px;
-    padding: 30px;
-
-    box-shadow: 0 15px 40px rgba(216, 140, 154, 0.3);
-    border: 1px solid rgba(255, 182, 193, 0.4);
 }
 
 /* ABOUT */
 .about {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
 .about img {
-    width: 280px;
-    border-radius: 15px;
+    width: 300px;
+    border-radius: 10px;
 }
 
 .about-text {
     flex: 1;
 }
 
-/* ALBUM CARD (UPDATED TO PURPLE) */
-.album-card {
-    background: rgba(200, 170, 255, 0.15);
-    backdrop-filter: blur(10px);
-
-    border-radius: 20px;
-    padding: 30px;
-
-    box-shadow: 0 10px 30px rgba(170, 140, 255, 0.2);
-    border: 1px solid rgba(200, 170, 255, 0.3);
-}
-
-.album-card h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 /* ALBUM */
 .albums {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
+
 .album {
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-    max-width: 280px;
+    max-width: 300px;
 }
 
 .album:hover {
@@ -158,9 +130,9 @@ nav a {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: #fafafa;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 /* PASSWORD MODAL */
@@ -171,13 +143,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-
     background: rgba(0,0,0,0.7);
-
     justify-content: center;
     align-items: center;
-
-    z-index: 999; /* 🔥 important */
 }
 
 .modal-content {
@@ -202,52 +170,6 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
-
-.album.empty {
-    cursor: default;
-    opacity: 0.7;
-}
-
-.placeholder {
-    width: 100%;
-    height: 180px;
-    border-radius: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(200, 170, 255, 0.15);
-    border: 2px dashed rgba(200, 170, 255, 0.4);
-
-    color: #8a6fbf;
-    font-size: 14px;
-}
-
-    .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-container img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.logo-container span {
-    font-size: 18px;
-    color: #d88c9a;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-}
-
-    .logo-container:hover span {
-    opacity: 0.8;
-}
-    
 </style>
 </head>
 
@@ -255,10 +177,13 @@ button {
 
 <!-- NAV -->
 <nav>
-   <div class="logo-container">
-    <img src="logo.png" alt="Growing Love Photography Logo">
-    <span>Growing Love Photography</span>
-</div>
+    <div class="nav-inner">
+        <div class="logo-container">
+            <img src="logo.png" alt="Growing Love Photography Logo">
+            <span>Growing Love Photography</span>
+        </div>
+
+        <div>
             <a href="#about">About</a>
             <a href="#albums">Client Album</a>
         </div>
@@ -266,81 +191,55 @@ button {
 </nav>
 
 <!-- HERO -->
-<div class="hero-wrapper">
-    <div class="hero">
-        <img src="1C3BC68E-2423-4CBA-995F-061E72E30BC7.png" alt="Growing Love Photography Banner">
-    </div>
-</div>
-
-<div class="divider"></div>
+<div class="hero"></div>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-    <div class="about-card">
-        <div class="about">
-            <img src="IMG_0205.jpeg" alt="Photographer Samantha">
+    <div class="about">
+        <img src="IMG_0205.jpeg" alt="Photographer Samantha">
 
-           <div class="about-text">
-    <h2>Hi, I’m Samantha 🤍</h2>
+        <div class="about-text">
+            <h2>Hi, I’m Samantha 🤍</h2>
 
-    <p>The heart behind Growing Love Photography.</p>
+            <p>The heart behind Growing Love Photography.</p>
 
-    <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
+            <p>I’m a Wife and Mama first, and my journey into photography is deeply personal. My son is on the spectrum, and through him I’ve learned how important patience, understanding, and a safe environment truly are.</p>
 
-    <p>That is why Growing Love Photography was created 🌈  
-    A space where every family can feel seen, valued, and at ease.</p>
+            <p>That is why Growing Love Photography was created 🌈  
+            A space where every family can feel seen, valued, and at ease.</p>
 
-    <p>Every child deserves to be included.  
-    Every family deserves to have their moments captured.</p>
+            <p>Every child deserves to be included.  
+            Every family deserves to have their moments captured.</p>
 
-    <p>Here there is no pressure, only real moments, real connection, and real love.</p>
+            <p>Here there is no pressure, only real moments, real connection, and real love.</p>
 
-    <p>I’m so honored to be part of your story 🤍</p>
-</div>
+            <p>I’m so honored to be part of your story 🤍</p>
         </div>
     </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- ALBUM -->
+<!-- SINGLE ALBUM -->
 <section id="albums" class="section">
-    <div class="album-card">
+    <h2>Client Album</h2>
 
-        <h2>Client Albums</h2>
-           <div class="albums">
-
-    <!-- ACTIVE ALBUM -->
-    <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
-        <img src="IMG_0207.jpeg" alt="Paige Gilbert Maternity Shoot">
-        <p>Paige & Junior's Maternity Shoot</p>
+    <div class="albums">
+        <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
+            <img src="IMG_0207.jpeg" alt="Paige & Junior Maternity Shoot">
+            <p>Paige & Junior Maternity Shoot</p>
+        </div>
     </div>
-
-    <!-- BLANK ALBUM 1 -->
-    <div class="album empty">
-        <div class="placeholder">Coming Soon</div>
-        <p>Future Client Album</p>
-    </div>
-
-    <!-- BLANK ALBUM 2 -->
-    <div class="album empty">
-        <div class="placeholder">Coming Soon</div>
-        <p>Future Client Album</p>
-    </div>
-
-</div>
 </section>
-    
+
 <!-- PASSWORD MODAL -->
-<div id="passwordModal" onclick="closeModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
+<div id="passwordModal">
+    <div class="modal-content">
         <h3>Enter Password</h3>
         <input type="password" id="passwordInput" placeholder="Enter password">
         <br>
         <button onclick="checkPassword()">Enter</button>
     </div>
 </div>
-    
+
 <!-- FOOTER -->
 <footer>
     <p>© <span id="year"></span> Growing Love Photography</p>
@@ -352,7 +251,7 @@ button {
         </a>
     </p>
 
-    <p style="margin-top:10px; font-size:14px;">
+    <p style="margin-top:10px;">
         <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank" style="color:#d88c9a; text-decoration:none;">
             Follow along on Facebook 🤍
         </a>
@@ -366,39 +265,22 @@ let correctPassword = '';
 function openAlbum(album, password) {
     currentAlbum = album;
     correctPassword = password;
-
-    document.getElementById('passwordInput').value = '';
     document.getElementById('passwordModal').style.display = 'flex';
-}
-
-function closeModal() {
-    document.getElementById('passwordModal').style.display = 'none';
 }
 
 function checkPassword() {
     let input = document.getElementById('passwordInput').value;
 
     if (input === correctPassword) {
-        closeModal();
-
-        // redirect to album
         window.location.href = currentAlbum + ".html";
     } else {
         alert("Incorrect password");
     }
 }
 
-    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        checkPassword();
-    }
-});
-
+/* AUTO YEAR */
 document.getElementById("year").textContent = new Date().getFullYear();
-
 </script>
-
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
