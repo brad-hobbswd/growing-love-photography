@@ -245,8 +245,8 @@ button {
 </section>
 
 <!-- PASSWORD MODAL -->
-<div id="passwordModal">
-    <div class="modal-content">
+<div id="passwordModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
         <h3>Enter Password</h3>
         <input type="password" id="passwordInput">
         <br>
@@ -289,6 +289,26 @@ function checkPassword() {
         alert("Incorrect password");
     }
 }
+
+    /* CLOSE MODAL */
+function closeModal() {
+    document.getElementById('passwordModal').style.display = 'none';
+    document.getElementById('passwordInput').value = '';
+}
+
+/* ESC KEY CLOSE */
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+});
+
+/* ENTER KEY SUBMIT */
+document.getElementById("passwordInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        checkPassword();
+    }
+});
 
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
