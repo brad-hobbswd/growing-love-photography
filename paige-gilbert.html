@@ -168,6 +168,19 @@ footer a {
 footer a:hover {
     opacity: 0.7;
 }
+
+    /* DIVIDER (MATCHES MAIN SITE) */
+.divider {
+    max-width: 1000px;
+    margin: 20px auto;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(216,140,154,0.35),
+        transparent
+    );
+}
 </style>
 </head>
 
@@ -180,12 +193,12 @@ footer a:hover {
 <header>
     <img src="banner-paigejuniorphotos.png" alt="Paige & Junior Maternity Photos" style="max-width:1000px; width:100%; border-radius:10px;">
 </header>
-
+<div class="divider"></div>
 <div class="view-toggle">
-    <button onclick="showGrid()">Grid View</button>
-    <button onclick="startSlideshow(0)">Slideshow</button>
+    <button onclick="showGrid()">Now Viewing Grid View</button>
+    <button onclick="startSlideshow(0)">Click for Slideshow</button>
 </div>
-
+<div class="divider"></div>
 <!-- GRID -->
 <section class="gallery">
 
@@ -193,18 +206,22 @@ footer a:hover {
 <img src="IMG_0209.jpeg" onclick="startSlideshow(1)">
 <img src="IMG_0210.jpeg" onclick="startSlideshow(2)">
 <img src="IMG_0211.jpeg" onclick="startSlideshow(3)">
+    <div class="divider"></div>
 <img src="IMG_0212.jpeg" onclick="startSlideshow(4)">
 <img src="IMG_0213.jpeg" onclick="startSlideshow(5)">
 <img src="IMG_0214.jpeg" onclick="startSlideshow(6)">
 <img src="IMG_0215.jpeg" onclick="startSlideshow(7)">
+    <div class="divider"></div>
 <img src="IMG_0216.jpeg" onclick="startSlideshow(8)">
 <img src="IMG_0217.jpeg" onclick="startSlideshow(9)">
 <img src="IMG_0218.jpeg" onclick="startSlideshow(10)">
 <img src="IMG_0219.jpeg" onclick="startSlideshow(11)">
+    <div class="divider"></div>
 <img src="IMG_0220.jpeg" onclick="startSlideshow(12)">
 <img src="IMG_0221.jpeg" onclick="startSlideshow(13)">
 <img src="IMG_0222.jpeg" onclick="startSlideshow(14)">
 <img src="IMG_0223.jpeg" onclick="startSlideshow(15)">
+    <div class="divider"></div>
 <img src="IMG_0224.jpeg" onclick="startSlideshow(16)">
 <img src="IMG_0225.jpeg" onclick="startSlideshow(17)">
 
@@ -217,7 +234,7 @@ footer a:hover {
     <img id="slide-img">
     <span class="nav-btn next" onclick="changeSlide(1)">❯</span>
 </div>
-
+<div class="divider"></div>
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
