@@ -130,10 +130,40 @@ nav a {
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 25px;
     background: #fafafa;
     margin-top: 40px;
+}
+
+/* MATCH SITE WIDTH */
+.footer-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* TEXT STYLING */
+.footer-main {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.footer-sub {
+    font-size: 13px;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* LINKS */
+footer a {
+    color: #d88c9a;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.7;
 }
 
 /* PASSWORD MODAL */
@@ -256,18 +286,22 @@ button {
 
 <!-- FOOTER -->
 <footer>
-    <p>© <span id="year"></span> Growing Love Photography</p>
+    <div class="footer-inner">
+        <p class="footer-main">© <span id="year"></span> Growing Love Photography</p>
 
-    <p style="margin-top:5px; font-size:13px; color:#888;">
-        Website designed by 
-        <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Brad Hobbs Web Design</a>
-    </p>
+        <p class="footer-sub">
+            Website designed by 
+            <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">
+                Brad Hobbs Web Design
+            </a>
+        </p>
 
-    <p style="margin-top:10px;">
-        <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank">
-            Follow along on Facebook 🤍
-        </a>
-    </p>
+        <p class="footer-sub">
+            <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank">
+                Follow along on Facebook 🤍
+            </a>
+        </p>
+    </div>
 </footer>
 
 <script>
