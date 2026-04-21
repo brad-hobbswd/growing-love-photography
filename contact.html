@@ -44,6 +44,29 @@ nav {
     color: #d88c9a;
 }
 
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo-container span {
+    font-size: 20px;
+    color: #d88c9a;
+}
+
 .section {
     max-width: 1000px;
     margin: auto;
@@ -86,12 +109,13 @@ footer {
 <nav>
     <div class="nav-inner">
         <div class="logo-container">
-            <img src="logo.png">
+            <img src="logo.png" alt="Logo">
             <span>Growing Love Photography</span>
         </div>
 
         <div>
-            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#albums">Client Albums</a>
             <a href="contact.html">Contact</a>
         </div>
     </div>
