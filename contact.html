@@ -44,13 +44,6 @@ nav {
     color: #d88c9a;
 }
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #555;
-}
-
-/* SECTION */
 .section {
     max-width: 1000px;
     margin: auto;
@@ -63,18 +56,26 @@ nav a {
     background: #fff0f5;
     padding: 40px;
     border-radius: 12px;
-    display: inline-block;
 }
 
 /* BUTTON */
-button {
+.email-btn {
+    display: inline-block;
     margin-top: 20px;
-    padding: 12px 20px;
+    padding: 12px 22px;
     background: #d88c9a;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 6px;
-    cursor: pointer;
+    font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #fafafa;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -99,20 +100,40 @@ button {
 <!-- CONTENT -->
 <section class="section">
     <div class="card">
-        <h2>Booking Coming Soon 🤍</h2>
+        <h2>Booking Now Open 🤍</h2>
 
         <p>
-            Growing Love Photography is currently building a beautiful portfolio.
-            Booking will be available soon.
+            Ready to capture your moments?  
+            Tap below to send a booking request.
         </p>
 
-        <p>
-            Thank you for your patience and support.
-        </p>
+        <!-- EMAIL BUTTON -->
+        <a href="mailto:Samanthasr1994@gmail.com?subject=Booking Inquiry&body=Hi Samantha,%0A%0AI would love to book a session with Growing Love Photography.%0A%0AHere is my information:%0AName:%0APhone:%0ASession Type:%0APreferred Date:%0A%0AI look forward to hearing from you!"
+           class="email-btn">
+            Start Booking
+        </a>
 
-        <button disabled>Bookings Opening Soon</button>
+        <p style="margin-top:20px; font-size:14px; color:#666;">
+            You can also reach out directly via email anytime.
+        </p>
     </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© <span id="year"></span> Growing Love Photography</p>
+
+    <p style="margin-top:5px; font-size:13px; color:#888;">
+        Website designed by 
+        <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" style="color:#d88c9a; text-decoration:none;">
+            Brad Hobbs Web Design
+        </a>
+    </p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
