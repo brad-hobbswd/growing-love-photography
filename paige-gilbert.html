@@ -14,6 +14,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #fff;
     color: #333;
+    user-select: none;
 }
 
 /* HEADER */
@@ -145,6 +146,12 @@ footer {
     text-align: center;
     padding: 15px 15px 10px;
 }
+
+    img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
 </style>
 </head>
 
@@ -248,6 +255,10 @@ function closeSlideshow() {
 function showGrid() {
     closeSlideshow();
 }
+
+    document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
 </script>
 
 <script>
