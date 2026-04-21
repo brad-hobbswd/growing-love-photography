@@ -19,17 +19,19 @@ body {
 
 /* NAVBAR */
 nav {
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: #fff0f5;
+    border-bottom: 1px solid #f3d6de;
 }
 
-.nav-inner {
-    max-width: 1000px;
-    margin: auto;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #8a4f5c;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #d88c9a;
 }
 
 .logo-container {
@@ -46,13 +48,7 @@ nav {
 
 .logo-container span {
     font-size: 20px;
-    color: #d88c9a;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #555;
+    color: #c06c84;
 }
 
 /* HERO */
@@ -213,7 +209,6 @@ button {
         transparent
     );
 }
-}
     
 </style>
 </head>
@@ -339,7 +334,7 @@ function checkPassword() {
 }
 
     /* CLOSE MODAL */
-function closeModal() {
+function closeModal(e) {
     document.getElementById('passwordModal').style.display = 'none';
     document.getElementById('passwordInput').value = '';
 }
