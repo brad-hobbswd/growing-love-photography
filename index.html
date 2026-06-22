@@ -99,8 +99,10 @@ nav a:hover {
 
 /* ALBUM */
 .albums {
-    display: flex;
-    justify-content: center;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 25px;
 }
 
 .album {
@@ -227,6 +229,26 @@ button {
     font-weight: 500;
     white-space: nowrap;
 }
+
+@media(max-width:768px){
+
+    .nav-inner{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .albums{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .album{
+        width:100%;
+        max-width:350px;
+    }
+
+}
     
 </style>
 </head>
@@ -282,23 +304,20 @@ button {
 <!-- ALBUM -->
 <section id="albums" class="section album-section">
     <h2>Client Albums</h2>
-
-    <div class="albums">
-        <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
-            <img src="IMG_0207.jpeg">
-            <p>Paige & Junior Maternity Shoot</p>
-        </div>
-
-        <div class="album">
-            <img src="placeholder.png">
-            <p>Coming Soon</p>
-        </div>
-
-        <div class="album">
-            <img src="placeholder.png">
-            <p>Coming Soon</p>
-        </div>
+<div class="albums">
+    <div class="album" onclick="openAlbum('paige-gilbert', 'baby1234')">
+        <img src="IMG_0207.jpeg" alt="Paige & Junior Maternity Shoot">
+        <p>Paige & Junior Maternity Shoot</p>
     </div>
+    <div class="album" onclick="window.location.href='fathersday.html'">
+        <img src="images/IMG_0114.jpeg" alt="Father & Son Father's Day Session">
+        <p>Father & Son Father's Day Session</p>
+    </div>
+    <div class="album">
+        <img src="placeholder.png" alt="Coming Soon">
+        <p>Coming Soon</p>
+    </div>
+</div>
 </section>
 
 <!-- PASSWORD MODAL -->
