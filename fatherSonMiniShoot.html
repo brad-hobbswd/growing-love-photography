@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Father & Son Father's Day Session</title>
+
+<meta name="author" content="Brad Hobbs Web Design">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#fff;
+    color:#333;
+    user-select:none;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:25px 15px;
+}
+
+header h1{
+    color:#d88c9a;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#777;
+}
+
+/* BACK LINK */
+
+.back-home{
+    text-align:center;
+    margin-top:20px;
+}
+
+.back-home a{
+    text-decoration:none;
+    color:#d88c9a;
+    font-size:14px;
+}
+
+/* BUTTONS */
+
+.view-toggle{
+    text-align:center;
+    margin:20px 0;
+}
+
+.view-toggle button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#d88c9a;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.view-toggle button:hover{
+    opacity:.9;
+}
+
+/* DIVIDER */
+
+.divider{
+    max-width:1000px;
+    margin:20px auto;
+    height:2px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(216,140,154,.35),
+        transparent
+    );
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    padding:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    display:block;
+    cursor:pointer;
+    transition:transform .2s ease;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* SLIDESHOW */
+
+#slideshow{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:black;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:9999;
+}
+
+#slideshow img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:10px;
+}
+
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:35px;
+    color:white;
+    cursor:pointer;
+    padding:15px;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#fafafa;
+    margin-top:40px;
+    box-shadow:inset 0 1px 0 rgba(216,140,154,.12);
+}
+
+.footer-inner{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-main{
+    font-size:14px;
+    color:#333;
+    margin-bottom:8px;
+}
+
+.footer-sub{
+    font-size:13px;
+    color:#888;
+    margin:5px 0;
+}
+
+footer a{
+    color:#d88c9a;
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="back-home">
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<header>
+
+    <h1>Father & Son Father's Day Session</h1>
+
+    <p>
+        Celebrating the special bond between a father and his son.
+    </p>
+
+</header>
+
+<div class="divider"></div>
+
+<div class="view-toggle">
+    <button onclick="showGrid()">Now Viewing Grid View</button>
+    <button onclick="startSlideshow(0)">Click for Slideshow</button>
+</div>
+
+<div class="divider"></div>
+
+<section class="gallery">
+
+<img src="images/IMG_0100.jpeg" onclick="startSlideshow(0)">
+<img src="images/IMG_0101.jpeg" onclick="startSlideshow(1)">
+<img src="images/IMG_0102.jpeg" onclick="startSlideshow(2)">
+<img src="images/IMG_0103.jpeg" onclick="startSlideshow(3)">
+<img src="images/IMG_0104.jpeg" onclick="startSlideshow(4)">
+<img src="images/IMG_0105.jpeg" onclick="startSlideshow(5)">
+<img src="images/IMG_0106.jpeg" onclick="startSlideshow(6)">
+<img src="images/IMG_0107.jpeg" onclick="startSlideshow(7)">
+<img src="images/IMG_0108.jpeg" onclick="startSlideshow(8)">
+<img src="images/IMG_0109.jpeg" onclick="startSlideshow(9)">
+<img src="images/IMG_0110.jpeg" onclick="startSlideshow(10)">
+<img src="images/IMG_0111.jpeg" onclick="startSlideshow(11)">
+<img src="images/IMG_0112.jpeg" onclick="startSlideshow(12)">
+<img src="images/IMG_0113.jpeg" onclick="startSlideshow(13)">
+<img src="images/IMG_0114.jpeg" onclick="startSlideshow(14)">
+<img src="images/IMG_0115.jpeg" onclick="startSlideshow(15)">
+<img src="images/IMG_0116.jpeg" onclick="startSlideshow(16)">
+<img src="images/IMG_0117.jpeg" onclick="startSlideshow(17)">
+<img src="images/IMG_0118.jpeg" onclick="startSlideshow(18)">
+
+</section>
+
+<div id="slideshow">
+
+    <span class="close" onclick="closeSlideshow()">✕</span>
+
+    <span class="nav-btn prev" onclick="changeSlide(-1)">❮</span>
+
+    <img id="slide-img">
+
+    <span class="nav-btn next" onclick="changeSlide(1)">❯</span>
+
+</div>
+
+<div class="divider"></div>
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p class="footer-main">
+            © <span id="year"></span> Growing Love Photography
+        </p>
+
+        <p class="footer-sub">
+            Website designed by
+            <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">
+                Brad Hobbs Web Design
+            </a>
+        </p>
+
+        <p class="footer-sub">
+            <a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank">
+                Follow Along on Facebook 🤍
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+let images = [
+
+"images/IMG_0100.jpeg",
+"images/IMG_0101.jpeg",
+"images/IMG_0102.jpeg",
+"images/IMG_0103.jpeg",
+"images/IMG_0104.jpeg",
+"images/IMG_0105.jpeg",
+"images/IMG_0106.jpeg",
+"images/IMG_0107.jpeg",
+"images/IMG_0108.jpeg",
+"images/IMG_0109.jpeg",
+"images/IMG_0110.jpeg",
+"images/IMG_0111.jpeg",
+"images/IMG_0112.jpeg",
+"images/IMG_0113.jpeg",
+"images/IMG_0114.jpeg",
+"images/IMG_0115.jpeg",
+"images/IMG_0116.jpeg",
+"images/IMG_0117.jpeg",
+"images/IMG_0118.jpeg"
+
+];
+
+let currentIndex = 0;
+
+function startSlideshow(index){
+    currentIndex = index;
+    document.getElementById("slideshow").style.display = "flex";
+    showSlide();
+}
+
+function showSlide(){
+    document.getElementById("slide-img").src = images[currentIndex];
+}
+
+function changeSlide(step){
+
+    currentIndex += step;
+
+    if(currentIndex < 0){
+        currentIndex = images.length - 1;
+    }
+
+    if(currentIndex >= images.length){
+        currentIndex = 0;
+    }
+
+    showSlide();
+}
+
+function closeSlideshow(){
+    document.getElementById("slideshow").style.display = "none";
+}
+
+function showGrid(){
+    closeSlideshow();
+}
+
+document.addEventListener("contextmenu",function(e){
+    e.preventDefault();
+});
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
