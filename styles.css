@@ -36,7 +36,7 @@
   height:430px;
   max-height:none;
   object-fit:cover;
-  object-position:center 4%;
+  object-position:center 28%;
   border-radius:0;
   display:block;
 }
@@ -80,7 +80,7 @@
 }
 @media(max-width:680px){
   .gallery-banner-wrap{min-height:350px;border-radius:18px}
-  .gallery-banner-wrap .gallery-banner{height:350px;object-position:center 2%;}
+  .gallery-banner-wrap .gallery-banner{height:350px;object-position:center 24%;}
   .gallery-banner-overlay{padding:28px}
   .gallery-banner-overlay h1{font-size:clamp(2.8rem,15vw,4.5rem)}
 }
