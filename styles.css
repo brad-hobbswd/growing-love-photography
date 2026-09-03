@@ -84,3 +84,5 @@
   .gallery-banner-overlay{padding:28px}
   .gallery-banner-overlay h1{font-size:clamp(2.8rem,15vw,4.5rem)}
 }
+
+.paige-junior-banner{position:relative;width:100%;min-height:430px;overflow:hidden;border-radius:24px;background:#4b3a34}.paige-junior-banner .gallery-banner{width:100%;height:430px;max-height:none;display:block;object-fit:cover;object-position:center center;border-radius:0}.paige-junior-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(37,27,23,.68) 0%,rgba(37,27,23,.34) 43%,rgba(37,27,23,.08) 76%,rgba(37,27,23,.16) 100%)}@media(max-width:680px){.paige-junior-banner{min-height:350px;border-radius:18px}.paige-junior-banner .gallery-banner{height:350px;object-position:center center}}
