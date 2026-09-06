@@ -1,1 +1,630 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="logo.png"><link rel="stylesheet" href="styles.css?v=20260903-father-son-banner"><title>Father & Son | Growing Love Photography</title></head><body><header class="site-header"><div class="nav"><a class="brand" href="index.html"><img src="logo.png" alt="Growing Love Photography logo"><span><strong>Growing Love Photography</strong><span>Real moments. Real connection. Real love.</span></span></a><button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#albums">Client Albums</a><a href="contact.html">Book a Session</a></nav></div></header><main class="gallery-page"><div class="container"><a class="back-link" href="index.html#albums">← Back to Client Albums</a><div class="gallery-banner-wrap father-son-banner"><img class="gallery-banner" src="images/IMG_0114.jpeg" alt="Father & Son"><div class="gallery-banner-overlay"><span class="gallery-banner-kicker">Growing Love Photography</span><h1>Father &amp; Son</h1><p>A Father's Day Session</p></div></div><div class="section-head" style="margin:36px auto 0"><div class="eyebrow">Client Gallery</div><h1 class="section-title">Father & Son</h1><p>Celebrating the special bond, laughter, and connection shared between a father and his son.</p></div><div class="gallery-actions"><button onclick="showGrid()">Grid View</button><button onclick="startSlideshow(0)">Start Slideshow</button></div><section class="gallery"><img src="images/IMG_0100.jpeg" loading="lazy" alt="Father & Son photograph 1" onclick="startSlideshow(0)"><img src="images/IMG_0101.jpeg" loading="lazy" alt="Father & Son photograph 2" onclick="startSlideshow(1)"><img src="images/IMG_0102.jpeg" loading="lazy" alt="Father & Son photograph 3" onclick="startSlideshow(2)"><img src="images/IMG_0103.jpeg" loading="lazy" alt="Father & Son photograph 4" onclick="startSlideshow(3)"><img src="images/IMG_0104.jpeg" loading="lazy" alt="Father & Son photograph 5" onclick="startSlideshow(4)"><img src="images/IMG_0105.jpeg" loading="lazy" alt="Father & Son photograph 6" onclick="startSlideshow(5)"><img src="images/IMG_0106.jpeg" loading="lazy" alt="Father & Son photograph 7" onclick="startSlideshow(6)"><img src="images/IMG_0107.jpeg" loading="lazy" alt="Father & Son photograph 8" onclick="startSlideshow(7)"><img src="images/IMG_0108.jpeg" loading="lazy" alt="Father & Son photograph 9" onclick="startSlideshow(8)"><img src="images/IMG_0109.jpeg" loading="lazy" alt="Father & Son photograph 10" onclick="startSlideshow(9)"><img src="images/IMG_0110.jpeg" loading="lazy" alt="Father & Son photograph 11" onclick="startSlideshow(10)"><img src="images/IMG_0111.jpeg" loading="lazy" alt="Father & Son photograph 12" onclick="startSlideshow(11)"><img src="images/IMG_0112.jpeg" loading="lazy" alt="Father & Son photograph 13" onclick="startSlideshow(12)"><img src="images/IMG_0113.jpeg" loading="lazy" alt="Father & Son photograph 14" onclick="startSlideshow(13)"><img src="images/IMG_0114.jpeg" loading="lazy" alt="Father & Son photograph 15" onclick="startSlideshow(14)"><img src="images/IMG_0115.jpeg" loading="lazy" alt="Father & Son photograph 16" onclick="startSlideshow(15)"><img src="images/IMG_0116.jpeg" loading="lazy" alt="Father & Son photograph 17" onclick="startSlideshow(16)"><img src="images/IMG_0117.jpeg" loading="lazy" alt="Father & Son photograph 18" onclick="startSlideshow(17)"><img src="images/IMG_0118.jpeg" loading="lazy" alt="Father & Son photograph 19" onclick="startSlideshow(18)"></section></div></main><div id="slideshow"><span class="close" onclick="closeSlideshow()">✕</span><span class="nav-btn prev" onclick="changeSlide(-1)">❮</span><img id="slide-img" alt="Slideshow photograph"><span class="nav-btn next" onclick="changeSlide(1)">❯</span></div><footer class="site-footer"><div class="footer"><strong>Growing Love Photography</strong><p>Real moments. Real connection. Real love.</p><div class="footer-links"><a href="index.html">Home</a><a href="contact.html">Book a Session</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></div><p><a href="https://m.facebook.com/profile.php?id=61571003291121" target="_blank" rel="noopener">Follow Along on Facebook 🤍</a></p><p>© <span id="year"></span> Growing Love Photography · Website designed by <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener">Brad Hobbs Web Design</a></p></div></footer><script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}document.getElementById("year").textContent=new Date().getFullYear();</script><script>const images=["images/IMG_0100.jpeg","images/IMG_0101.jpeg","images/IMG_0102.jpeg","images/IMG_0103.jpeg","images/IMG_0104.jpeg","images/IMG_0105.jpeg","images/IMG_0106.jpeg","images/IMG_0107.jpeg","images/IMG_0108.jpeg","images/IMG_0109.jpeg","images/IMG_0110.jpeg","images/IMG_0111.jpeg","images/IMG_0112.jpeg","images/IMG_0113.jpeg","images/IMG_0114.jpeg","images/IMG_0115.jpeg","images/IMG_0116.jpeg","images/IMG_0117.jpeg","images/IMG_0118.jpeg"];let currentIndex=0;function startSlideshow(index){currentIndex=index;document.getElementById('slideshow').style.display='flex';showSlide()}function showSlide(){document.getElementById('slide-img').src=images[currentIndex]}function changeSlide(step){currentIndex=(currentIndex+step+images.length)%images.length;showSlide()}function closeSlideshow(){document.getElementById('slideshow').style.display='none'}function showGrid(){closeSlideshow()}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSlideshow();if(e.key==='ArrowLeft')changeSlide(-1);if(e.key==='ArrowRight')changeSlide(1)});document.addEventListener('contextmenu',e=>e.preventDefault());</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <link
+        rel="icon"
+        href="logo.png">
+
+    <link
+        rel="stylesheet"
+        href="styles.css?v=20260903-father-son-banner">
+
+    <title>
+        Father & Son | Growing Love Photography
+    </title>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="nav">
+
+
+            <a
+                class="brand"
+                href="index.html">
+
+                <img
+                    src="logo.png"
+                    alt="Growing Love Photography logo">
+
+
+                <span>
+
+                    <strong>
+                        Growing Love Photography
+                    </strong>
+
+                    <span>
+                        Real moments. Real connection. Real love.
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Open navigation">
+
+                ☰
+
+            </button>
+
+
+            <nav
+                class="nav-links"
+                id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#albums">
+                    Client Albums
+                </a>
+
+                <a href="contact.html">
+                    Book a Session
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- GALLERY -->
+
+    <main class="gallery-page">
+
+        <div class="container">
+
+
+            <a
+                class="back-link"
+                href="index.html#albums">
+
+                ← Back to Client Albums
+
+            </a>
+
+
+
+            <!-- BANNER -->
+
+            <div class="gallery-banner-wrap father-son-banner">
+
+
+                <img
+                    class="gallery-banner"
+                    src="images/IMG_0114.jpeg"
+                    alt="Father & Son">
+
+
+                <div class="gallery-banner-overlay">
+
+
+                    <span class="gallery-banner-kicker">
+                        Growing Love Photography
+                    </span>
+
+
+                    <h1>
+                        Father &amp; Son
+                    </h1>
+
+
+                    <p>
+                        A Father's Day Session
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GALLERY TITLE -->
+
+            <div
+                class="section-head"
+                style="margin:36px auto 0">
+
+
+                <div class="eyebrow">
+                    Client Gallery
+                </div>
+
+
+                <h1 class="section-title">
+                    Father & Son
+                </h1>
+
+
+                <p>
+                    Celebrating the special bond, laughter, and connection
+                    shared between a father and his son.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- GALLERY BUTTONS -->
+
+            <div class="gallery-actions">
+
+
+                <button onclick="showGrid()">
+                    Grid View
+                </button>
+
+
+                <button onclick="startSlideshow(0)">
+                    Start Slideshow
+                </button>
+
+
+            </div>
+
+
+
+            <!-- PHOTO GALLERY -->
+
+            <section class="gallery">
+
+
+                <img
+                    src="images/IMG_0100.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 1"
+                    onclick="startSlideshow(0)">
+
+
+                <img
+                    src="images/IMG_0101.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 2"
+                    onclick="startSlideshow(1)">
+
+
+                <img
+                    src="images/IMG_0102.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 3"
+                    onclick="startSlideshow(2)">
+
+
+                <img
+                    src="images/IMG_0103.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 4"
+                    onclick="startSlideshow(3)">
+
+
+                <img
+                    src="images/IMG_0104.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 5"
+                    onclick="startSlideshow(4)">
+
+
+                <img
+                    src="images/IMG_0105.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 6"
+                    onclick="startSlideshow(5)">
+
+
+                <img
+                    src="images/IMG_0106.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 7"
+                    onclick="startSlideshow(6)">
+
+
+                <img
+                    src="images/IMG_0107.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 8"
+                    onclick="startSlideshow(7)">
+
+
+                <img
+                    src="images/IMG_0108.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 9"
+                    onclick="startSlideshow(8)">
+
+
+                <img
+                    src="images/IMG_0109.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 10"
+                    onclick="startSlideshow(9)">
+
+
+                <img
+                    src="images/IMG_0110.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 11"
+                    onclick="startSlideshow(10)">
+
+
+                <img
+                    src="images/IMG_0111.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 12"
+                    onclick="startSlideshow(11)">
+
+
+                <img
+                    src="images/IMG_0112.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 13"
+                    onclick="startSlideshow(12)">
+
+
+                <img
+                    src="images/IMG_0113.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 14"
+                    onclick="startSlideshow(13)">
+
+
+                <img
+                    src="images/IMG_0114.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 15"
+                    onclick="startSlideshow(14)">
+
+
+                <img
+                    src="images/IMG_0115.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 16"
+                    onclick="startSlideshow(15)">
+
+
+                <img
+                    src="images/IMG_0116.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 17"
+                    onclick="startSlideshow(16)">
+
+
+                <img
+                    src="images/IMG_0117.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 18"
+                    onclick="startSlideshow(17)">
+
+
+                <img
+                    src="images/IMG_0118.jpeg"
+                    loading="lazy"
+                    alt="Father & Son photograph 19"
+                    onclick="startSlideshow(18)">
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- SLIDESHOW -->
+
+    <div id="slideshow">
+
+
+        <span
+            class="close"
+            onclick="closeSlideshow()">
+
+            ✕
+
+        </span>
+
+
+        <span
+            class="nav-btn prev"
+            onclick="changeSlide(-1)">
+
+            ❮
+
+        </span>
+
+
+        <img
+            id="slide-img"
+            alt="Slideshow photograph">
+
+
+        <span
+            class="nav-btn next"
+            onclick="changeSlide(1)">
+
+            ❯
+
+        </span>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer">
+
+
+            <strong>
+                Growing Love Photography
+            </strong>
+
+
+            <p>
+                Real moments. Real connection. Real love.
+            </p>
+
+
+            <div class="footer-links">
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="contact.html">
+                    Book a Session
+                </a>
+
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+
+                <a href="copyright.html">
+                    Copyright
+                </a>
+
+
+            </div>
+
+
+            <p>
+
+                <a
+                    href="https://m.facebook.com/profile.php?id=61571003291121"
+                    target="_blank"
+                    rel="noopener">
+
+                    Follow Along on Facebook 🤍
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                ©
+                <span id="year"></span>
+
+                Growing Love Photography
+                ·
+                Website designed by
+
+                <a
+                    href="https://brad-hobbswd.github.io/brad-hobbswd/"
+                    target="_blank"
+                    rel="noopener">
+
+                    Brad Hobbs Web Design
+
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- NAVIGATION JAVASCRIPT -->
+
+    <script>
+
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .toggle("active");
+
+        }
+
+
+        document
+            .getElementById("year")
+            .textContent =
+            new Date().getFullYear();
+
+
+    </script>
+
+
+
+    <!-- GALLERY JAVASCRIPT -->
+
+    <script>
+
+
+        const images = [
+
+            "images/IMG_0100.jpeg",
+            "images/IMG_0101.jpeg",
+            "images/IMG_0102.jpeg",
+            "images/IMG_0103.jpeg",
+            "images/IMG_0104.jpeg",
+            "images/IMG_0105.jpeg",
+            "images/IMG_0106.jpeg",
+            "images/IMG_0107.jpeg",
+            "images/IMG_0108.jpeg",
+            "images/IMG_0109.jpeg",
+            "images/IMG_0110.jpeg",
+            "images/IMG_0111.jpeg",
+            "images/IMG_0112.jpeg",
+            "images/IMG_0113.jpeg",
+            "images/IMG_0114.jpeg",
+            "images/IMG_0115.jpeg",
+            "images/IMG_0116.jpeg",
+            "images/IMG_0117.jpeg",
+            "images/IMG_0118.jpeg"
+
+        ];
+
+
+        let currentIndex = 0;
+
+
+        function startSlideshow(index) {
+
+            currentIndex = index;
+
+            document
+                .getElementById("slideshow")
+                .style.display = "flex";
+
+            showSlide();
+
+        }
+
+
+        function showSlide() {
+
+            document
+                .getElementById("slide-img")
+                .src =
+                images[currentIndex];
+
+        }
+
+
+        function changeSlide(step) {
+
+            currentIndex =
+                (
+                    currentIndex +
+                    step +
+                    images.length
+                )
+                % images.length;
+
+            showSlide();
+
+        }
+
+
+        function closeSlideshow() {
+
+            document
+                .getElementById("slideshow")
+                .style.display =
+                "none";
+
+        }
+
+
+        function showGrid() {
+
+            closeSlideshow();
+
+        }
+
+
+        document.addEventListener(
+            "keydown",
+            e => {
+
+
+                if (e.key === "Escape") {
+
+                    closeSlideshow();
+
+                }
+
+
+                if (e.key === "ArrowLeft") {
+
+                    changeSlide(-1);
+
+                }
+
+
+                if (e.key === "ArrowRight") {
+
+                    changeSlide(1);
+
+                }
+
+
+            }
+        );
+
+
+        document.addEventListener(
+            "contextmenu",
+            e => e.preventDefault()
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
