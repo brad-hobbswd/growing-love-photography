@@ -16,9 +16,11 @@
 
     <link
         rel="stylesheet"
-        href="styles.css?v=20260908-telaya">
+        href="styles.css?v=20260908-telaya-final">
 
-    <title>Little Miss Telaya | Growing Love Photography</title>
+    <title>
+        Little Miss Telaya | Growing Love Photography
+    </title>
 
 </head>
 
@@ -132,16 +134,12 @@
 
 
                     <h1>
-
                         Little Miss Telaya
-
                     </h1>
 
 
                     <p>
-
                         A Beautiful Baby Photography Session
-
                     </p>
 
 
@@ -160,24 +158,18 @@
 
 
                 <div class="eyebrow">
-
                     Private Client Gallery
-
                 </div>
 
 
                 <h1 class="section-title">
-
                     Little Miss Telaya
-
                 </h1>
 
 
                 <p>
-
                     Beautiful moments captured to celebrate the sweetness,
                     personality, and joy of Little Miss Telaya.
-
                 </p>
 
 
@@ -190,14 +182,18 @@
             <div class="gallery-actions">
 
 
-                <button onclick="showGrid()">
+                <button
+                    type="button"
+                    onclick="showGrid()">
 
                     Grid View
 
                 </button>
 
 
-                <button onclick="startSlideshow(0)">
+                <button
+                    type="button"
+                    onclick="startSlideshow(0)">
 
                     Start Slideshow
 
@@ -283,14 +279,6 @@
 
                 <img src="catrinaImages/IMG_0418.jpeg" loading="lazy" alt="Little Miss Telaya photograph 35" onclick="startSlideshow(34)">
 
-                <img src="catrinaImages/IMG_0419.jpeg" loading="lazy" alt="Little Miss Telaya photograph 36" onclick="startSlideshow(35)">
-
-                <img src="catrinaImages/IMG_0420.png" loading="lazy" alt="Little Miss Telaya photograph 37" onclick="startSlideshow(36)">
-
-                <img src="catrinaImages/IMG_0421.png" loading="lazy" alt="Little Miss Telaya photograph 38" onclick="startSlideshow(37)">
-
-                <img src="catrinaImages/IMG_0422.jpeg" loading="lazy" alt="Little Miss Telaya photograph 39" onclick="startSlideshow(38)">
-
 
             </section>
 
@@ -303,25 +291,31 @@
 
     <!-- SLIDESHOW -->
 
-    <div id="slideshow">
+    <div
+        id="slideshow"
+        aria-hidden="true">
 
 
-        <span
+        <button
             class="close"
+            type="button"
+            aria-label="Close slideshow"
             onclick="closeSlideshow()">
 
             ✕
 
-        </span>
+        </button>
 
 
-        <span
+        <button
             class="nav-btn prev"
+            type="button"
+            aria-label="Previous photograph"
             onclick="changeSlide(-1)">
 
             ❮
 
-        </span>
+        </button>
 
 
         <img
@@ -329,13 +323,15 @@
             alt="Little Miss Telaya slideshow photograph">
 
 
-        <span
+        <button
             class="nav-btn next"
+            type="button"
+            aria-label="Next photograph"
             onclick="changeSlide(1)">
 
             ❯
 
-        </span>
+        </button>
 
 
     </div>
@@ -350,16 +346,12 @@
 
 
             <strong>
-
                 Growing Love Photography
-
             </strong>
 
 
             <p>
-
                 Real moments. Real connection. Real love.
-
             </p>
 
 
@@ -501,11 +493,7 @@
             "catrinaImages/IMG_0415.jpeg",
             "catrinaImages/IMG_0416.jpeg",
             "catrinaImages/IMG_0417.jpeg",
-            "catrinaImages/IMG_0418.jpeg",
-            "catrinaImages/IMG_0419.jpeg",
-            "catrinaImages/IMG_0420.png",
-            "catrinaImages/IMG_0421.png",
-            "catrinaImages/IMG_0422.jpeg"
+            "catrinaImages/IMG_0418.jpeg"
 
         ];
 
@@ -517,9 +505,18 @@
 
             currentIndex = index;
 
-            document
-                .getElementById("slideshow")
-                .style.display = "flex";
+            const slideshow =
+                document.getElementById("slideshow");
+
+
+            slideshow.style.display = "flex";
+
+
+            slideshow.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
 
             showSlide();
 
@@ -530,7 +527,8 @@
 
             document
                 .getElementById("slide-img")
-                .src = images[currentIndex];
+                .src =
+                images[currentIndex];
 
         }
 
@@ -538,8 +536,16 @@
         function changeSlide(step) {
 
             currentIndex =
-                (currentIndex + step + images.length)
-                % images.length;
+                (
+                    currentIndex
+                    +
+                    step
+                    +
+                    images.length
+                )
+                %
+                images.length;
+
 
             showSlide();
 
@@ -548,9 +554,17 @@
 
         function closeSlideshow() {
 
-            document
-                .getElementById("slideshow")
-                .style.display = "none";
+            const slideshow =
+                document.getElementById("slideshow");
+
+
+            slideshow.style.display = "none";
+
+
+            slideshow.setAttribute(
+                "aria-hidden",
+                "true"
+            );
 
         }
 
@@ -558,6 +572,13 @@
         function showGrid() {
 
             closeSlideshow();
+
+            document
+                .querySelector(".gallery")
+                .scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
         }
 
