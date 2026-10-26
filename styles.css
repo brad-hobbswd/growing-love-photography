@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
 :root{
     --rose:#d88c9a;
     --rose-deep:#9f5b6a;
@@ -1590,7 +1591,7 @@ body{background-color:var(--editorial-ivory);background-image:radial-gradient(rg
 
 
 /* ART-DIRECTED SIGNATURE EXPERIENCE */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 body{font-family:'DM Sans',Arial,sans-serif}
 .editorial-hero h1,.editorial-note-copy h2,.section-title,.copy h2,.specialty h3,.album-copy strong,.cta-box h2,.signature-story-heading h2{font-family:'Cormorant Garamond',Georgia,serif}
 .editorial-hero{width:min(1360px,calc(100% - 56px));grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);gap:clamp(38px,6vw,100px);padding-top:clamp(50px,7vw,92px)}
