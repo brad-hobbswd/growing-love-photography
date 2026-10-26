@@ -1742,3 +1742,84 @@ body{font-family:'DM Sans',Arial,sans-serif}
   .album-browsing-note{gap:12px;margin:-12px auto 32px;padding:17px 16px}
   .album-browsing-note p{font-size:.84rem}
 }
+ 
+/* SOFT & JOYFUL BRAND PERSONALITY
+   A gentle visual layer that preserves the approved page sections and layout. */
+:root{
+  --joy-cream:#fffaf3;
+  --joy-blush:#f3e2dc;
+  --joy-peach:#f5e2cf;
+  --joy-sage:#dfe8d8;
+  --joy-rose:#b97978;
+  --joy-ink:#5b4542;
+}
+body{
+  background-color:var(--joy-cream);
+  background-image:radial-gradient(ellipse at 8% 18%,rgba(243,226,220,.25),transparent 32%),
+                   radial-gradient(ellipse at 92% 46%,rgba(223,232,216,.23),transparent 30%);
+}
+.site-header{
+  background:rgba(255,250,243,.94);
+  border-bottom:1px solid rgba(185,121,120,.2);
+}
+.brand strong{color:var(--joy-ink)}
+.brand>span>span{color:#8b7770}
+.nav-links a{transition:color .2s ease,transform .2s ease}
+.nav-links a:hover{color:var(--joy-rose);transform:translateY(-1px)}
+.editorial-kicker,.eyebrow{color:#a66d6b}
+.editorial-hero h1,.section-head .section-title,.copy h2,.cta-box h2{
+  text-wrap:balance;
+}
+.editorial-hero h1 em,.editorial-note-copy h2 em,.signature-story-heading h2 em{
+  color:var(--joy-rose);
+}
+.editorial-button{
+  background:var(--joy-ink);
+  border-radius:3px 14px 3px 14px;
+  box-shadow:5px 5px 0 rgba(243,226,220,.95);
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.editorial-button:hover{transform:translateY(-2px);box-shadow:7px 7px 0 rgba(223,232,216,.95)}
+.editorial-photo-mat img{border-radius:48% 48% 3px 3px / 16% 16% 3px 3px}
+.editorial-photo-caption{color:#8c716b}
+.trust-bar{background:linear-gradient(100deg,#f4e5df,#f8eee5 52%,#e8eee2)}
+.trust-item strong{color:var(--joy-ink)}
+.section-soft,.section-lavender{background-color:#f8eee7}
+.section-head .eyebrow,.copy .eyebrow{color:#a66d6b}
+.specialty img{
+  border-radius:46% 46% 3px 3px / 12% 12% 3px 3px;
+  transition:transform .35s ease,filter .35s ease;
+}
+.specialty:nth-child(2) img{border-radius:3px 3px 46% 46% / 3px 3px 12% 12%}
+.specialty:nth-child(3) img{border-radius:46% 46% 3px 3px / 12% 12% 3px 3px}
+.specialty:hover img{transform:translateY(-4px) rotate(-.5deg);filter:saturate(1.04)}
+.specialty h3,.process-card h3,.album-copy strong{color:var(--joy-ink)}
+.specialty-cta{border-color:#e7d4ca;color:#a66d6b}
+.process{border-color:#e4d2c7}
+.process-card .num{color:var(--joy-rose)}
+.album img{
+  border-radius:3px 3px 3px 22px;
+  box-shadow:8px 8px 0 #f2e2d9,0 15px 28px rgba(91,69,66,.08);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.album:nth-child(even) img{border-radius:3px 3px 22px 3px;box-shadow:-8px 8px 0 #e4eadf,0 15px 28px rgba(91,69,66,.08)}
+.album:hover img{transform:translateY(-4px) rotate(-.5deg)}
+.album-copy strong{display:block}
+.album-browsing-note{
+  background:linear-gradient(110deg,#f8e9e4,#fff8ef 65%,#edf1e8);
+  border-left-color:var(--joy-rose);
+  border-radius:3px 18px 3px 18px;
+}
+.album-browsing-note-title{color:var(--joy-ink)}
+.cta{background:linear-gradient(120deg,#6b504d,#80605b);border-radius:34px 34px 0 0}
+.cta .btn-primary{border-radius:3px 12px 3px 12px}
+.cta .btn-secondary{border-radius:3px 12px 3px 12px}
+.btn{transition:transform .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+@media(max-width:680px){
+  .editorial-photo-mat img{border-radius:46% 46% 3px 3px / 10% 10% 3px 3px}
+  .specialty img{border-radius:38% 38% 3px 3px / 8% 8% 3px 3px}
+  .specialty:nth-child(2) img{border-radius:3px 3px 38% 38% / 3px 3px 8% 8px}
+  .album img,.album:nth-child(even) img{box-shadow:5px 5px 0 #f2e2d9,0 10px 18px rgba(91,69,66,.07)}
+  .cta{border-radius:24px 24px 0 0}
+}
