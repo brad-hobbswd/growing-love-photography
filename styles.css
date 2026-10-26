@@ -1970,3 +1970,34 @@ body{
  .cta-box h2{font-size:clamp(3.2rem,12vw,4.6rem)}
  .footer-links a{border-right:0}
 }
+
+
+/* Final image safety fix: never cut off faces in portrait photographs */
+.editorial-photo-mat img,
+.note-photo img,
+.mosaic-frame img,
+.specialty img,
+.album img,
+.gallery img,
+.story-photo img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+@media (max-width: 900px) {
+  .editorial-photo-mat img {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+  }
+}
+@media (max-width: 680px) {
+  .note-photo img,
+  .mosaic-frame img,
+  .specialty img,
+  .album img,
+  .gallery img,
+  .story-photo img {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
