@@ -1,66 +1,45 @@
-Growing Love Photography
+# Growing Love Photography
+## Real Moments. Real Connection. Real Love.
 
-Growing Love Photography is a family focused photography business dedicated to capturing real moments, real connection, and real love.
+Growing Love Photography is a family-focused photography business created to capture meaningful moments and preserve memories. The site presents photography information, selected client galleries, and contact details for session inquiries.
 
-This website serves as the online home for client galleries, photography information, and contact details.
-
-Live Website
+## Live Website
 
 https://brad-hobbswd.github.io/growing-love-photography/
 
-About
+## Website Features
 
-Growing Love Photography was created to provide a welcoming and comfortable photography experience for every family. We believe every child deserves to be included, every family deserves to feel valued, and every special moment deserves to be remembered.
+- Photography portfolio and featured sessions
+- Client galleries and family photography
+- Contact and session booking information
+- Privacy, terms, and copyright information
+- Responsive design for desktop and mobile devices
 
-Featured Galleries
+## Featured Sessions
 
-Paige & Junior Maternity Shoot
+The website includes selected galleries and sessions such as maternity photography and father-and-son portraits. Client photographs are shared only as presented on the website and should not be copied or reused without permission.
 
-Private client gallery featuring maternity photography.
+## Technology
 
-Father & Son Father’s Day Session
+The website is built with HTML, CSS, and JavaScript and hosted through GitHub Pages.
 
-Celebrating the special bond between fathers and their children through timeless photography.
+## Copyright, Client Privacy, and Permissions
 
-Website Features
+Copyright © 2026 Growing Love Photography. All rights reserved.
 
-* Responsive mobile friendly design
-* Password protected client galleries
-* Photography portfolio showcase
-* Contact page
-* Privacy Policy
-* Terms of Use
-* Copyright Information
-* Facebook integration
+Original business copy, branding, graphics, layout, and website code are protected by the accompanying [LICENSE](LICENSE). Photographs and client-submitted materials remain subject to the rights of the photographer and/or the relevant client, according to any applicable agreement. Do not download, reproduce, edit, distribute, publish, or use photographs without written permission.
 
-Technology
+Website design and development by [Brad Hobbs Web Design](https://brad-hobbswd.github.io/brad-hobbswd/).
 
-Built using:
+## Search Engine Files
 
-* HTML5
-* CSS3
-* JavaScript
-* GitHub Pages
+- [Sitemap](sitemap.xml)
+- [robots.txt](robots.txt)
 
-Copyright
+## Contact
 
-All photographs, graphics, logos, and website content remain the property of Growing Love Photography unless otherwise stated.
+For session inquiries, booking requests, or permission requests, please use the contact page on the website.
 
-No photographs may be copied, reproduced, downloaded, modified, distributed, published, or used without prior written permission.
+---
 
-© 2026 Growing Love Photography. All Rights Reserved.
-
-Website Design
-
-Website designed and maintained by Brad Hobbs Web Design.
-
-Portfolio:
-https://brad-hobbswd.github.io/brad-hobbswd/
-
-Contact
-
-For photography inquiries, session information, or booking requests, please visit the Contact page on the website.
-
-⸻
-
-Real moments. Real connection. Real love.
+**Real moments. Real connection. Real love.**
