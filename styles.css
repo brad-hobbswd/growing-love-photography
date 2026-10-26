@@ -1416,3 +1416,45 @@ a:focus-visible,button:focus-visible{outline:3px solid #c6a77b;outline-offset:3p
  .editorial-photo-mat img{height:min(118vw,570px)}
  .editorial-hero-bottom{margin-top:8px;font-size:.96rem}
 }
+
+
+/* Site-wide editorial finish for inner pages and private client galleries */
+:root{--editorial-rose:#a9716e;--editorial-taupe:#766c65;--editorial-ivory:#faf6ef;--editorial-gold:#c6a77b}
+.page-hero{padding:clamp(58px,8vw,96px) 0 52px;background:linear-gradient(135deg,#f4e8e3,#faf6ef);border-bottom:1px solid #e4d7cd}
+.page-hero .page-title{font-size:clamp(2.8rem,6vw,5rem);letter-spacing:-.035em}
+.page-hero p{max-width:680px;line-height:1.85}
+.legal{padding:clamp(42px,7vw,76px) 0}
+.legal h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:#825a58}
+.legal p,.legal li{line-height:1.85}
+.gallery-page{padding-top:clamp(24px,4vw,48px)}
+.gallery-banner-wrap{position:relative;overflow:hidden;border:1px solid #d5c2b1;background:#fffdf9;padding:10px;box-shadow:0 18px 42px rgba(75,55,45,.12);border-radius:2px}
+.gallery-banner-wrap:after{content:"";position:absolute;inset:5px;border:1px solid rgba(198,167,123,.8);pointer-events:none}
+.gallery-banner{border-radius:0;max-height:460px;object-fit:cover}
+.gallery-banner-overlay{background:linear-gradient(90deg,rgba(48,36,32,.62),rgba(48,36,32,.08));}
+.gallery-banner-kicker{letter-spacing:.2em;text-transform:uppercase}
+.gallery-page .section-head{margin-top:42px;margin-bottom:32px}
+.gallery-page .section-title{font-weight:400}
+.gallery-actions{gap:10px}
+.gallery-actions button{min-height:44px;padding:12px 18px;transition:background .2s,transform .2s}
+.gallery-actions button:hover{transform:translateY(-2px)}
+.gallery{align-items:start}
+.gallery img{object-fit:cover;object-position:center;cursor:zoom-in}
+.back-link{font-size:.82rem;letter-spacing:.04em}
+.site-header .nav{min-height:78px}
+.brand img{border-radius:50%;object-fit:contain}
+.contact-grid{align-items:stretch}
+.contact-card,.info-card{padding:clamp(22px,4vw,36px)}
+.contact-card p,.info-card p{line-height:1.85}
+.info-list{gap:16px}
+.footer-links a{transition:color .2s}
+.footer-links a:hover{color:#a9716e;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:680px){
+ .site-header .nav{min-height:68px}
+ .page-hero{padding:52px 0 38px}
+ .gallery-banner-wrap{padding:6px}
+ .gallery-banner{max-height:360px}
+ .gallery-banner-overlay{padding:18px}
+ .gallery-page .section-head{margin-top:30px}
+ .contact-grid{gap:18px}
+ .footer{padding:36px 0}
+}
