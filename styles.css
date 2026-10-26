@@ -1709,3 +1709,36 @@ body{font-family:'DM Sans',Arial,sans-serif}
  .editorial-photo-mat img{object-position:center 16%}
  .mosaic-frame img,.specialty img,.album img,.gallery img{object-position:center 15%}
 }
+
+/* Clear, welcoming instructions for browsing client galleries */
+.album-browsing-note{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  max-width:760px;
+  margin:-18px auto 42px;
+  padding:20px 24px;
+  background:linear-gradient(135deg,#fffdf9 0%,#f4e9e2 100%);
+  border:1px solid #e3d1c7;
+  border-left:3px solid #b7837d;
+  color:#766c65;
+  box-shadow:0 12px 28px rgba(75,55,45,.045);
+}
+.album-browsing-note-mark{
+  flex:0 0 auto;
+  color:#a9716e;
+  font-size:1.25rem;
+  line-height:1.2;
+}
+.album-browsing-note p{margin:0;font-size:.9rem;line-height:1.75}
+.album-browsing-note .album-browsing-note-title{
+  margin:0 0 4px;
+  color:#594541;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.45rem;
+  line-height:1.15;
+}
+@media(max-width:680px){
+  .album-browsing-note{gap:12px;margin:-12px auto 32px;padding:17px 16px}
+  .album-browsing-note p{font-size:.84rem}
+}
