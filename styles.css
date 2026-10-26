@@ -1694,3 +1694,18 @@ body{font-family:'DM Sans',Arial,sans-serif}
  .album img{height:190px}
  .album-copy strong{font-size:1.25rem}
 }
+
+
+/* Keep faces and important details inside the visible crop */
+.editorial-photo-mat img{object-position:center 18%}
+.note-photo img{object-position:center 18%}
+.mosaic-frame img{object-position:center 18%}
+.specialty img{object-position:center 18%}
+.album img{object-position:center 18%}
+.gallery img{object-position:center 18%}
+.gallery-banner{object-position:center 25%}
+.story-photo img{object-position:center 18%}
+@media(max-width:680px){
+ .editorial-photo-mat img{object-position:center 16%}
+ .mosaic-frame img,.specialty img,.album img,.gallery img{object-position:center 15%}
+}
